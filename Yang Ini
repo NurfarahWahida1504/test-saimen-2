@@ -1,0 +1,768 @@
+package test;
+import java.util.Scanner;
+public class test9Mira {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner (System.in);
+		double price_Niancinamide = 30;
+		double price_Zinc = 25;
+		double price_AHA = 35;
+		double price_Alpha= 45;
+		double price_Hyalucronic= 30;
+		double price_Beta = 35;
+		double price_charge = 20;
+		double price_Niancinamide2 = 45;
+		double price_Zinc2 = 40;
+		double price_AHA2 = 60;
+		double price_Alpha2= 60;
+		double price_Beta2 = 60;
+		double price_Hyalucronic2= 45;
+		double amount, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22;
+		double price, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22;
+		double finalprice, finalprice2; 
+		double total,t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20, t21, t22;
+		double size1, size2, size3, size4, size5, size6, size7, size8, size9;
+		
+		
+		
+		System.out.println("                           Welcome to The Ordinary website, Your House of beauty!    ");
+		System.out.println();
+		
+	
+		System.out.println("            CUSTOMERS DETAILS             ");
+		System.out.println("------------------------------------------");
+		System.out.print("Enter your name : ");
+		String name = sc.nextLine();
+		System.out.print("Enter your email : ");
+		String email = sc.nextLine();
+		System.out.print("Enter your phone number : ");
+		String number = sc.nextLine();
+		System.out.print("Enter your address : ");
+		String address = sc.nextLine();
+		System.out.println();
+		
+		System.out.println("***********************************************************************************");
+		System.out.println("*             Welcome to The Ordinary House of Beauty, " + name +"!                      *");
+		System.out.println("*_________________________________________________________________________________*");
+		System.out.println("*                                                                                 *");
+		System.out.println("*Before you proceed,                                                              *");
+		System.out.println("*We would like to inform that                                                     *");
+		System.out.println("*You can add only two ingredient into your Serum.                                 *");
+		System.out.println("*You will be charge RM20 if you add more than two ingredients into you Serum      *");
+		System.out.println("*You can only order two bottles of serum for each purchase                        *");
+		System.out.println("***********************************************************************************");
+		System.out.println();
+		
+		System.out.println("Here is the ingredients that you can add into your Serum and the price list");
+		System.out.println("Happy Shopping!");
+		System.out.println();
+		System.out.println();
+		System.out.println("Please select your order size : ");
+		size1 = sc.nextDouble();
+		
+		while (size1 != 30 && size1 != 60) {
+			System.out.println("The chosen size is unavailable");
+			System.out.println("Please select your order size : ");
+			size1 = sc.nextDouble();
+		}
+		if(size1 == 30) {
+			System.out.println();
+			System.out.println("Great! Now choose your ingredients for your 30ml Serum.");
+			System.out.println();
+			System.out.println();
+			System.out.println("            ************************************************************");
+			System.out.println("            *                                                          *");
+			System.out.println("            *        INGREDIENTS           QUANTITY    PRICE           *");
+			System.out.println("            *__________________________________________________________*");
+			System.out.println("            *       Niancinamide 10%         1          30             *");
+			System.out.println("            *       Zinc 1%                  1          25             *");
+			System.out.println("            *       Alpha Arbutin 2%         1          45             *");
+			System.out.println("            *       Beta Hydroxy 2%          1          35             *");
+			System.out.println("            *       Hyalucronic Acid 2%      1          30             *");
+			System.out.println("            *       Alpha Hydroxy Acid 30%   1          35             *");
+			System.out.println("            *                                                          *");
+			System.out.println("            ************************************************************");
+			System.out.println();
+			System.out.println();
+			
+			System.out.println("You can add only two ingredients into your Serum.                                 ");
+			System.out.println("You will be charge RM20 if you add more than two ingredients into you Serum      ");
+			System.out.println();
+			
+			System.out.println("Please enter the first ingredient you want to add : ");
+			String ingredient1 = sc.next();
+			System.out.println("Enter the quantity of " + ingredient1 + " : " );
+			amount = sc.nextDouble();
+			System.out.println();
+			
+			System.out.println("Please enter the second ingredient you want to add : ");
+			String ingredient2 = sc.next();
+			System.out.println("Enter the quantity of " + ingredient2 + " : " );
+			a2 = sc.nextDouble();
+			System.out.println();
+			
+			System.out.println("Do you want to add other ingredients? " );
+			System.out.println();
+			System.out.println("[1] NO [2] YES");
+			System.out.println();
+		       int yesno = sc.nextInt();
+		       if(yesno==1) {
+				   System.out.println("NO");
+			        total = ((amount*price_Niancinamide) + (a2*price_Zinc));
+			        System.out.println("============================================================================");
+					System.out.println();
+					System.out.print("         Your price for your 30ml Serum is : RM" +  (total));   
+					System.out.println();
+					System.out.println("============================================================================");
+					System.out.println();
+					System.out.println("Do you want to add new order or proceed to payment? " );
+					
+					System.out.println("[1] Payment [2] Proceed Order");
+					int order = sc.nextInt();
+				    switch (order) {
+				    case 1 :
+				    	System.out.println("Proceed to Payment"); 
+						total = ((amount*price_Niancinamide) + (a2*price_Zinc));
+						System.out.println("    __________________________________________________________________________________________");
+						System.out.println();
+						
+						System.out.print("        Your total price for your Order is RM" + (total));
+						System.out.println();
+						System.out.println("    __________________________________________________________________________________________");
+						System.out.println();
+						System.out.println("Choose your payment method : "); 
+						String Payment1= sc.next();
+						System.out.println();
+						System.out.println("Delivery : Free Delivery ");
+						System.out.println();
+						System.out.println();
+						System.out.println("    ***********************************************************************************");
+						System.out.println("    *                                                                                  *");
+						System.out.println("    *                       Thank You for purchasing from us!                          *");
+						System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+						System.out.println("    *                You will get your order after 14days of working                   *");
+						System.out.println("    *                                                                                  *");
+						System.out.println("    ************************************************************************************");
+						System.out.println();
+						  break;
+				    case 2 :
+						  System.out.println("Proceed to Order");
+				            System.out.println();
+				            System.out.println("Lets continue shopping! Please select your second order size : ");
+							size2 = sc.nextDouble();
+									
+							  if(size2 == 30) {
+							            System.out.println();
+										System.out.println("Great! Now choose your ingredients for your 30ml Serum.");
+										System.out.println();
+										System.out.println();
+										System.out.println("            ************************************************************");
+										System.out.println("            *                                                          *");
+										System.out.println("            *        INGREDIENTS           QUANTITY    PRICE           *");
+										System.out.println("            *__________________________________________________________*");
+										System.out.println("            *       Niancinamide 10%         1          30             *");
+										System.out.println("            *       Zinc 1%                  1          25             *");
+										System.out.println("            *       Alpha Arbutin 2%         1          45             *");
+										System.out.println("            *       Beta Hydroxy 2%          1          35             *");
+										System.out.println("            *       Hyalucronic Acid 2%      1          30             *");
+										System.out.println("            *       Alpha Hydroxy Acid 30%   1          35             *");
+										System.out.println("            *                                                          *");
+										System.out.println("            ************************************************************");
+										System.out.println();
+										System.out.println();
+										
+										System.out.println("You can add only two ingredients into your Serum.                                 ");
+										System.out.println("You will be charge RM20 if you add more than two ingredients into you Serum      ");
+										System.out.println();
+										
+										System.out.println("Please enter the first ingredient you want to add : ");
+										String ingredient4 = sc.next();
+										System.out.println("Enter the quantity of " + ingredient4 + " : " );
+										a4= sc.nextDouble();
+										System.out.println();
+										
+										System.out.println("Please enter the second ingredient you want to add : ");
+										String ingredient5 = sc.next();
+										System.out.println("Enter the quantity of " + ingredient5 + " : " );
+										a5 = sc.nextDouble();
+										System.out.println();
+										
+										System.out.println("Do you want to add other ingredients? " );
+										System.out.println();
+										System.out.println("[1] NO [2] YES");
+										System.out.println();
+									       int yesno1 = sc.nextInt();
+										 
+										   if(yesno1==1) {
+											    System.out.println("No");
+										        t1 = ((a4*price_Hyalucronic) + (a5*price_Beta));
+										        System.out.println("============================================================================");
+												System.out.println();
+												System.out.print("         Your price for your 30ml Serum is : RM" +  (t1));   
+												System.out.println();
+												System.out.println("============================================================================");
+												System.out.println();
+												System.out.println("You cant buy more than 2 item, Now continue to make payment. ");
+												System.out.println("Choose your payment method : "); 
+												String Payment2 = sc.next();
+												System.out.println();
+												System.out.println("Delivery : Free Delivery ");
+												System.out.println();
+												System.out.println();
+												System.out.println("    ************************************************************************************");
+												System.out.println("    *                                                                                  *");
+												System.out.println("    *                       Thank You for purchasing from us!                          *");
+												System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+												System.out.println("    *                You will get your order after 14days of working                   *");
+												System.out.println("    *                                                                                  *");
+												System.out.println("    ************************************************************************************");
+												break;
+										   }
+							  
+										   else if(yesno1==2) {
+										   		System.out.println("Yes");
+											   
+										   		System.out.println("Please enter the third ingredient you want to add : ");
+										   		String ingredient6 = sc.next();
+										   		System.out.println("Enter the quantity of " + ingredient6 + " : " );
+										   		a6= sc.nextDouble();
+										   		System.out.println();
+										   		t2 = ((a4*price_Hyalucronic) + (a5*price_Beta) + (a6*price_Alpha) + (price_charge));
+										   		System.out.println("============================================================================");
+										   		System.out.println();
+										   		System.out.print("         Your total price for your 30ml Serum is : RM" +  (t2));   
+										   		System.out.println();
+												System.out.println("============================================================================");
+												System.out.println();
+												System.out.println("You cant buy more than 2 item, Now continue to make payment. ");
+												System.out.println("Choose your payment method : "); 
+												String Payment3= sc.next();
+												System.out.println();
+												System.out.println("Delivery : Free Delivery ");
+												System.out.println();
+												System.out.println();
+												System.out.println("    ***********************************************************************************");
+												System.out.println("    *                                                                                  *");
+												System.out.println("    *                       Thank You for purchasing from us!                          *");
+												System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+												System.out.println("    *                You will get your order after 14days of working                   *");
+												System.out.println("    *                                                                                  *");
+												System.out.println("    ***********************************************************************************");
+												break;
+    }
+	}
+	}
+				    
+    }
+		       else if (yesno==2) {
+		    	   System.out.println("YES");
+		    	   System.out.println("Please enter the third ingredient you want to add : ");
+			   		String ingredient3 = sc.next();
+			   		System.out.println("Enter the quantity of " + ingredient3 + " : " );
+			   		a3= sc.nextDouble();
+			        t3 = ((amount*price_Niancinamide) + (a2*price_Zinc) + (a2*price_AHA) + (price_charge));
+			        System.out.println("============================================================================");
+					System.out.println();
+					System.out.print("         Your price for your 30ml Serum is : RM" +  (t3));   
+					System.out.println();
+					System.out.println("============================================================================");
+					System.out.println();
+					
+					System.out.println("Do you want to add new order or proceed to payment? " );
+					
+					System.out.println("[1] Payment [2] Proceed Order");
+					int order1 = sc.nextInt();
+				    switch (order1) {
+				    case 1 :
+				    	System.out.println("Proceed to Payment"); 
+				    	t3 = ((amount*price_Niancinamide) + (a2*price_Zinc) + (a2*price_AHA) + (price_charge));
+						System.out.println("    __________________________________________________________________________________________");
+						System.out.println();
+						
+						System.out.print("        Your total price for your Order is RM" + (t3));
+						System.out.println();
+						System.out.println("    __________________________________________________________________________________________");
+						System.out.println();
+						System.out.println("Choose your payment method : "); 
+						String Payment3= sc.next();
+						System.out.println();
+						System.out.println("Delivery : Free Delivery ");
+						System.out.println();
+						System.out.println();
+						System.out.println("    ***********************************************************************************");
+						System.out.println("    *                                                                                  *");
+						System.out.println("    *                       Thank You for purchasing from us!                          *");
+						System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+						System.out.println("    *                You will get your order after 14days of working                   *");
+						System.out.println("    *                                                                                  *");
+						System.out.println("    ************************************************************************************");
+						System.out.println();
+						  break;
+				    case 2: 
+						
+			            System.out.println("Proceed to Order");
+			            System.out.println();
+			            System.out.println("Lets continue shopping! Please select your second order size : ");
+						size3 = sc.nextDouble();
+								
+						  if(size3 == 30) {
+						            System.out.println();
+									System.out.println("Great! Now choose your ingredients for your 30ml Serum.");
+									System.out.println();
+									System.out.println();
+									System.out.println("            ************************************************************");
+									System.out.println("            *                                                          *");
+									System.out.println("            *        INGREDIENTS           QUANTITY    PRICE           *");
+									System.out.println("            *__________________________________________________________*");
+									System.out.println("            *       Niancinamide 10%         1          30             *");
+									System.out.println("            *       Zinc 1%                  1          25             *");
+									System.out.println("            *       Alpha Arbutin 2%         1          45             *");
+									System.out.println("            *       Beta Hydroxy 2%          1          35             *");
+									System.out.println("            *       Hyalucronic Acid 2%      1          30             *");
+									System.out.println("            *       Alpha Hydroxy Acid 30%   1          35             *");
+									System.out.println("            *                                                          *");
+									System.out.println("            ************************************************************");
+									System.out.println();
+									System.out.println();
+									
+									System.out.println("You can add only two ingredients into your Serum.                                 ");
+									System.out.println("You will be charge RM20 if you add more than two ingredients into you Serum      ");
+									System.out.println();
+									
+									System.out.println("Please enter the first ingredient you want to add : ");
+									String ingredient4 = sc.next();
+									System.out.println("Enter the quantity of " + ingredient4 + " : " );
+									a4= sc.nextDouble();
+									System.out.println();
+									
+									System.out.println("Please enter the second ingredient you want to add : ");
+									String ingredient5 = sc.next();
+									System.out.println("Enter the quantity of " + ingredient5 + " : " );
+									a5 = sc.nextDouble();
+									System.out.println();
+									
+									System.out.println("Do you want to add other ingredients? " );
+									System.out.println();
+									System.out.println("[1] NO [2] YES");
+									System.out.println();
+								       int yesno2 = sc.nextInt(); 
+									 
+									   if(yesno2==1) {
+										    System.out.println("No");
+									        t1 = ((a4*price_Hyalucronic) + (a5*price_Beta));
+									        System.out.println("============================================================================");
+											System.out.println();
+											System.out.print("         Your price for your 30ml Serum is : RM" +  (t1));   
+											System.out.println();
+											System.out.println("============================================================================");
+											System.out.println();
+											System.out.println("You cant buy more than 2 item, Now continue to make payment. ");
+											System.out.println("Choose your payment method : "); 
+											String Payment4 = sc.next();
+											System.out.println();
+											System.out.println("Delivery : Free Delivery ");
+											System.out.println();
+											System.out.println();
+											System.out.println("    ************************************************************************************");
+											System.out.println("    *                                                                                  *");
+											System.out.println("    *                       Thank You for purchasing from us!                          *");
+											System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+											System.out.println("    *                You will get your order after 14days of working                   *");
+											System.out.println("    *                                                                                  *");
+											System.out.println("    ************************************************************************************");
+									   }
+						  
+									   	else if(yesno2==2) {
+									   		System.out.println("Yes");
+										   
+									   		System.out.println("Please enter the third ingredient you want to add : ");
+									   		String ingredient6 = sc.next();
+									   		System.out.println("Enter the quantity of " + ingredient6 + " : " ); ////////// 
+									   		a6= sc.nextDouble();
+									   		System.out.println();
+									   		t6 = ((a4*price_Hyalucronic) + (a5*price_Beta) + (a6*price_Alpha) + (price_charge));
+									   		System.out.println("============================================================================");
+									   		System.out.println();
+									   		System.out.print("         Your total price for your 30ml Serum is : RM" +  (t6));   
+									   		System.out.println();
+											System.out.println("============================================================================");
+											System.out.println();
+											System.out.println("You cant buy more than 2 item, Now continue to make payment. ");
+											System.out.println("Choose your payment method : "); 
+											String Payment4 = sc.next();
+											System.out.println();
+											System.out.println("Delivery : Free Delivery ");
+											System.out.println();
+											System.out.println();
+											System.out.println("    ***********************************************************************************");
+											System.out.println("    *                                                                                  *");
+											System.out.println("    *                       Thank You for purchasing from us!                          *");
+											System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+											System.out.println("    *                You will get your order after 14days of working                   *");
+											System.out.println("    *                                                                                  *");
+											System.out.println("    ***********************************************************************************");
+											break;
+									   }
+									   //
+									   
+		 	else if ( size1==60) {
+					System.out.println("Great! Now choose your ingredients for your 60ml Serum.");
+					System.out.println();
+					System.out.println();
+					System.out.println("            ************************************************************");
+					System.out.println("            *                                                          *");
+					System.out.println("            *        INGREDIENTS           QUANTITY    PRICE           *");
+					System.out.println("            *__________________________________________________________*");
+					System.out.println("            *        Niancinamide 10%         1          45            *");
+					System.out.println("            *        Zinc 1%                  1          40            *");
+					System.out.println("            *        Alpha Arbutin 2%         1          60            *");
+					System.out.println("            *        Beta Hydroxy 2%          1          60            *");
+					System.out.println("            *        Hyalucronic Acid 2%      1          45            *");
+					System.out.println("            *        Alpha Hydroxy Acid 30%   1          60            *");
+					System.out.println("            *                                                          *");
+					System.out.println("            ************************************************************");
+					System.out.println();
+					
+					System.out.println("You can add only two ingredients into your Serum.                                 ");
+					System.out.println("You will be charge RM20 if you add more than two ingredients into you Serum      ");
+					System.out.println();
+				
+					
+					
+					System.out.println("Please enter the first ingredient you want to add : ");
+					String ingredient13 = sc.next();
+					System.out.println("Enter the quantity of " + ingredient13 + " : " );
+					a13 = sc.nextDouble();
+					System.out.println();
+					
+					System.out.println("Please enter the second ingredient you want to add : ");
+					String ingredient14 = sc.next();
+					System.out.println("Enter the quantity of " + ingredient14 + " : " );
+					a14 = sc.nextDouble();
+					System.out.println();
+					
+					System.out.println("Do you want to add other ingredients? " );
+					System.out.println();
+					System.out.println("[1] NO [2] YES");
+					System.out.println();
+				       int yesno1 = sc.nextInt();
+				       if(yesno1==1) {
+						   System.out.println("NO");
+					        t14 = ((amount*price_Alpha2) + (a2*price_Beta2)); // 
+					        System.out.println("============================================================================");
+							System.out.println();
+							System.out.print("         Your price for your 60ml Serum is : RM" +  (t14));   
+							System.out.println();
+							System.out.println("============================================================================");
+							System.out.println();
+							System.out.println("Do you want to add new order or proceed to payment? " );
+							
+							System.out.println("[1] Payment [2] Proceed Order");
+							int order5 = sc.nextInt();
+						    switch (order5) {
+						    case 1 :
+						    	System.out.println("Proceed to Payment"); 
+						    	 t14 = ((amount*price_Alpha2) + (a2*price_Beta2)); //
+								System.out.println("    __________________________________________________________________________________________");
+								System.out.println();
+								
+								System.out.print("        Your total price for your Order is RM" + (t14));
+								System.out.println();
+								System.out.println("    __________________________________________________________________________________________");
+								System.out.println();
+								System.out.println("Choose your payment method : "); 
+								String Payment1= sc.next();
+								System.out.println();
+								System.out.println("Delivery : Free Delivery ");
+								System.out.println();
+								System.out.println();
+								System.out.println("    ***********************************************************************************");
+								System.out.println("    *                                                                                  *");
+								System.out.println("    *                       Thank You for purchasing from us!                          *");
+								System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+								System.out.println("    *                You will get your order after 14days of working                   *");
+								System.out.println("    *                                                                                  *");
+								System.out.println("    ************************************************************************************");
+								System.out.println();
+								  break;
+						    case 2 :
+								  System.out.println("Proceed to Order");
+						            System.out.println();
+						            System.out.println("Lets continue shopping! Please select your second order size : ");
+									size2 = sc.nextDouble();
+											
+									  if(size3 == 30) {
+									            System.out.println();
+												System.out.println("Great! Now choose your ingredients for your 60ml Serum.");
+												System.out.println();
+												System.out.println();
+												System.out.println("            ************************************************************");
+												System.out.println("            *                                                          *");
+												System.out.println("            *        INGREDIENTS           QUANTITY    PRICE           *");
+												System.out.println("            *__________________________________________________________*");
+												System.out.println("            *        Niancinamide 10%         1          45            *");
+												System.out.println("            *        Zinc 1%                  1          40            *");
+												System.out.println("            *        Alpha Arbutin 2%         1          60            *");
+												System.out.println("            *        Beta Hydroxy 2%          1          60            *");
+												System.out.println("            *        Hyalucronic Acid 2%      1          45            *");
+												System.out.println("            *        Alpha Hydroxy Acid 30%   1          60            *");
+												System.out.println("            *                                                          *");
+												System.out.println("            ************************************************************");
+												System.out.println();
+												System.out.println();
+												
+												System.out.println("You can add only two ingredients into your Serum.                                 ");
+												System.out.println("You will be charge RM20 if you add more than two ingredients into you Serum      ");
+												System.out.println();
+												
+												System.out.println("Please enter the first ingredient you want to add : ");
+												String ingredient16 = sc.next();
+												System.out.println("Enter the quantity of " + ingredient16 + " : " );
+												a16= sc.nextDouble();
+												System.out.println();
+												
+												System.out.println("Please enter the second ingredient you want to add : ");
+												String ingredient17 = sc.next();
+												System.out.println("Enter the quantity of " + ingredient17 + " : " );
+												a17 = sc.nextDouble();
+												System.out.println();
+												
+												System.out.println("Do you want to add other ingredients? " );
+												System.out.println();
+												System.out.println("[1] NO [2] YES");
+												System.out.println();
+											       int yesno4 = sc.nextInt();
+												 
+												   if(yesno4==1) {
+													    System.out.println("No");
+												       t17 = ((a16*price_AHA2) + (a17*price_Zinc2)); // 
+												        System.out.println("============================================================================");
+														System.out.println();
+														System.out.print("         Your price for your 60ml Serum is : RM" +  (t17));   
+														System.out.println();
+														System.out.println("============================================================================");
+														System.out.println();
+														System.out.println("You cant buy more than 2 item, Now continue to make payment. ");
+														System.out.println("Choose your payment method : "); 
+														String Payment2 = sc.next();
+														System.out.println();
+														System.out.println("Delivery : Free Delivery ");
+														System.out.println();
+														System.out.println();
+														System.out.println("    ************************************************************************************");
+														System.out.println("    *                                                                                  *");
+														System.out.println("    *                       Thank You for purchasing from us!                          *");
+														System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+														System.out.println("    *                You will get your order after 14days of working                   *");
+														System.out.println("    *                                                                                  *");
+														System.out.println("    ************************************************************************************");
+														break;
+												   }
+									  
+												   else if(yesno4==2) {
+												   		System.out.println("Yes");
+													   
+												   		System.out.println("Please enter the third ingredient you want to add : "); /// 
+												   		String ingredient18= sc.next();
+												   		System.out.println("Enter the quantity of " + ingredient18 + " : " );
+												   		a18= sc.nextDouble();
+												   		System.out.println();
+												   		t18 = ((a16*price_AHA2) + (a17*price_Zinc2) + (a18*price_Alpha2) + (price_charge)); // 
+												   		System.out.println("============================================================================");
+												   		System.out.println();
+												   		System.out.print("         Your total price for your 30ml Serum is : RM" +  (18));   
+												   		System.out.println();
+														System.out.println("============================================================================");
+														System.out.println();
+														System.out.println("You cant buy more than 2 item, Now continue to make payment. ");
+														System.out.println("Choose your payment method : "); 
+														String Payment7= sc.next();
+														System.out.println();
+														System.out.println("Delivery : Free Delivery ");
+														System.out.println();
+														System.out.println();
+														System.out.println("    ***********************************************************************************");
+														System.out.println("    *                                                                                  *");
+														System.out.println("    *                       Thank You for purchasing from us!                          *");
+														System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+														System.out.println("    *                You will get your order after 14days of working                   *");
+														System.out.println("    *                                                                                  *");
+														System.out.println("    ***********************************************************************************");
+														break;
+		    }
+			}
+			}
+						    
+		    }
+				       else if (yesno2==2) {
+				    	   System.out.println("YES");
+				    	   System.out.println("Please enter the third ingredient you want to add : ");
+					   		String ingredient15 = sc.next();
+					   		System.out.println("Enter the quantity of " + ingredient15 + " : " );
+					   		a15= sc.nextDouble();
+					        t15 = ((amount*price_Alpha2) + (a2*price_Beta2) + (a2*price_Hyalucronic2) + (price_charge)); // 
+					        System.out.println("============================================================================");
+							System.out.println();
+							System.out.print("         Your price for your 60ml Serum is : RM" +  (t15));   
+							System.out.println();
+							System.out.println("============================================================================");
+							System.out.println();
+							
+							System.out.println("Do you want to add new order or proceed to payment? " );
+							
+							System.out.println("[1] Payment [2] Proceed Order");
+							int order3= sc.nextInt();
+						    switch (order3) {
+						    case 1 :
+						    	System.out.println("Proceed to Payment"); 
+						    	 t15 = ((amount*price_Alpha2) + (a2*price_Beta2) + (a2*price_Hyalucronic2) + (price_charge));
+								System.out.println("    __________________________________________________________________________________________");
+								System.out.println();
+								
+								System.out.print("        Your total price for your Order is RM" + (t15));
+								System.out.println();
+								System.out.println("    __________________________________________________________________________________________");
+								System.out.println();
+								System.out.println("Choose your payment method : "); 
+								String Payment5= sc.next();
+								System.out.println();
+								System.out.println("Delivery : Free Delivery ");
+								System.out.println();
+								System.out.println();
+								System.out.println("    ***********************************************************************************");
+								System.out.println("    *                                                                                  *");
+								System.out.println("    *                       Thank You for purchasing from us!                          *");
+								System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+								System.out.println("    *                You will get your order after 14days of working                   *");
+								System.out.println("    *                                                                                  *");
+								System.out.println("    ************************************************************************************");
+								System.out.println();
+								  break;
+				    
+						    case 2: 
+								
+					            System.out.println("Proceed to Order");
+					            System.out.println();
+					            System.out.println("Lets continue shopping! Please select your second order size : ");
+								size2 = sc.nextDouble();
+										
+								  if(size2 == 30) {
+								            System.out.println();
+											System.out.println("Great! Now choose your ingredients for your 30ml Serum.");
+											System.out.println();
+											System.out.println();
+											System.out.println("            ************************************************************");
+											System.out.println("            *                                                          *");
+											System.out.println("            *        INGREDIENTS           QUANTITY    PRICE           *");
+											System.out.println("            *__________________________________________________________*");
+											System.out.println("            *        Niancinamide 10%         1          45            *");
+											System.out.println("            *        Zinc 1%                  1          40            *");
+											System.out.println("            *        Alpha Arbutin 2%         1          60            *");
+											System.out.println("            *        Beta Hydroxy 2%          1          60            *");
+											System.out.println("            *        Hyalucronic Acid 2%      1          45            *");
+											System.out.println("            *        Alpha Hydroxy Acid 30%   1          60            *");
+											System.out.println("            *                                                          *");
+											System.out.println("            ************************************************************");
+											System.out.println();
+											System.out.println();
+											
+											System.out.println("You can add only two ingredients into your Serum.                                 ");
+											System.out.println("You will be charge RM20 if you add more than two ingredients into you Serum      ");
+											System.out.println();
+											
+											System.out.println("Please enter the first ingredient you want to add : ");
+											String ingredient19 = sc.next();
+											System.out.println("Enter the quantity of " + ingredient19 + " : " );
+											a19= sc.nextDouble();
+											System.out.println();
+											
+											System.out.println("Please enter the second ingredient you want to add : ");
+											String ingredient20= sc.next();
+											System.out.println("Enter the quantity of " + ingredient20 + " : " );
+											a20 = sc.nextDouble();
+											System.out.println();
+											
+											System.out.println("Do you want to add other ingredients? " );
+											System.out.println();
+											System.out.println("[1] NO [2] YES");
+											System.out.println();
+										       int yesno7 = sc.nextInt();
+											 
+											   if(yesno7==1) {
+												    System.out.println("No");
+											        t20 = ((a19*price_Niancinamide2) + (a20*price_Beta2));
+											        System.out.println("============================================================================");
+													System.out.println();
+													System.out.print("         Your price for your 30ml Serum is : RM" +  (t20));   
+													System.out.println();
+													System.out.println("============================================================================");
+													System.out.println();
+													System.out.println("You cant buy more than 2 item, Now continue to make payment. ");
+													System.out.println("Choose your payment method : "); 
+													String Payment6 = sc.next();
+													System.out.println();
+													System.out.println("Delivery : Free Delivery ");
+													System.out.println();
+													System.out.println();
+													System.out.println("    ************************************************************************************");
+													System.out.println("    *                                                                                  *");
+													System.out.println("    *                       Thank You for purchasing from us!                          *");
+													System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+													System.out.println("    *                You will get your order after 14days of working                   *");
+													System.out.println("    *                                                                                  *");
+													System.out.println("    ************************************************************************************");
+											   }
+								  
+											   	else if(yesno1==2) {
+											   		System.out.println("Yes");
+												   
+											   		System.out.println("Please enter the third ingredient you want to add : ");
+											   		String ingredient21 = sc.next();
+											   		System.out.println("Enter the quantity of " + ingredient21 + " : " );
+											   		a21= sc.nextDouble();
+											   		System.out.println();
+											   		t21 = ((a19*price_Niancinamide2) + (a20*price_Beta2) + (a21*price_Hyalucronic2) + (price_charge));
+											   		System.out.println("============================================================================");
+											   		System.out.println();
+											   		System.out.print("         Your total price for your 30ml Serum is : RM" +  (t21));   
+											   		System.out.println();
+													System.out.println("============================================================================");
+													System.out.println();
+													System.out.println("You cant buy more than 2 item, Now continue to make payment. ");
+													System.out.println("Choose your payment method : "); 
+													String Payment9= sc.next();
+													System.out.println();
+													System.out.println("Delivery : Free Delivery ");
+													System.out.println();
+													System.out.println();
+													System.out.println("    ***********************************************************************************");
+													System.out.println("    *                                                                                  *");
+													System.out.println("    *                       Thank You for purchasing from us!                          *");
+													System.out.println("    *          We will send the receipt and the tracking number via email!             *");
+													System.out.println("    *                You will get your order after 14days of working                   *");
+													System.out.println("    *                                                                                  *");
+													System.out.println("    ***********************************************************************************");
+													break;
+											   	}
+								  }
+						    }
+				       
+
+		       
+				       }
+		 	
+	}
+
+						  }
+				    }
+		       }
+		}
+	}
+}
+	
+
+					
+
+
+
